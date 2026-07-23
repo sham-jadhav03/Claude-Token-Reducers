@@ -56,6 +56,37 @@ Add to your `CLAUDE.md`:
 Read reduce-token/SKILL.md and apply its rules whenever the user types /reduceToken.
 ```
 
+### Option D - Claude Desktop (recommended for daily use)
+
+Claude Desktop loads skills from a local folder it watches automatically.
+
+**macOS / Linux**
+```bash
+# 1. Clone the repo
+git clone https://github.com/sham-jadhav03/Claude-Token-Reducers.git
+
+# 2. Copy the skill into Claude Desktop's skills folder
+mkdir -p ~/.claude/skills
+cp -r Claude-Token-Reducers/reduce-token ~/.claude/skills/
+```
+
+**Windows**
+```powershell
+# 1. Clone the repo
+git clone https://github.com/sham-jadhav03/Claude-Token-Reducers.git
+
+# 2. Copy the skill into Claude Desktop's skills folder
+mkdir "$env:APPDATA\Claude\skills" -Force
+Copy-Item -Recurse Claude-Token-Reducers\reduce-token "$env:APPDATA\Claude\skills\"
+```
+
+3. Restart Claude Desktop
+4. Type `/reduceToken` in any chat — skill activates instantly
+
+> **Tip:** To update the skill later, just `git pull` in the repo folder and restart Claude Desktop.
+
+---
+
 ---
 
 ## Usage examples
